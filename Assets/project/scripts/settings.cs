@@ -87,6 +87,9 @@ public class settings : MonoBehaviour
             mixer.SetFloat("master", PlayerPrefs.GetFloat("master"));
         }
     }
-
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }
 
