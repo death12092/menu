@@ -48,11 +48,8 @@ public class settings : MonoBehaviour
     public void changevideo(int settingLevel)
     {
         QualitySettings.SetQualityLevel(settingLevel);
-    }
-    public void changerender(float scale)
-    {
-        UniversalRenderPipelineAsset pipeline = GraphicsSettings.currentRenderPipeline as UniversalRenderPipelineAsset;
-        pipeline.renderScale = scale;
+        PlayerPrefs.SetFloat("video", settingLevel);
+        PlayerPrefs.Save();
     }
     public void Audio(float volume)
     {
@@ -85,6 +82,10 @@ public class settings : MonoBehaviour
         if (PlayerPrefs.HasKey("master"))
         {
             mixer.SetFloat("master", PlayerPrefs.GetFloat("master"));
+        }
+        if (PlayerPrefs.HasKey("video"))
+        {
+            mixer.SetFloat("video", PlayerPrefs.GetFloat("video"));
         }
     }
     public void Exit()
