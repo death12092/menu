@@ -8,7 +8,7 @@ public class settings : MonoBehaviour
 {
     
     [SerializeField]
-    private Canvas main, Settings, audio, video;
+    private Canvas main, Settings, audio, video, controles;
     [SerializeField]
     private AudioMixer mixer;
     [SerializeField]
@@ -44,6 +44,16 @@ public class settings : MonoBehaviour
     {
         video.gameObject.SetActive(false);
         Settings.gameObject.SetActive(true);
+    }
+    public void change4()
+    {
+        Settings.gameObject.SetActive(false);
+        controles.gameObject.SetActive(true);
+    }
+    public void back4()
+    {
+        Settings.gameObject.SetActive(true);
+        controles.gameObject.SetActive(false);
     }
     public void changevideo(int settingLevel)
     {
