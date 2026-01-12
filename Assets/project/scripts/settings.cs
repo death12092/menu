@@ -55,12 +55,14 @@ public class settings : MonoBehaviour
         Settings.gameObject.SetActive(true);
         controles.gameObject.SetActive(false);
     }
+    //change video settings
     public void changevideo(int settingLevel)
     {
         QualitySettings.SetQualityLevel(settingLevel);
         PlayerPrefs.SetFloat("video", settingLevel);
         PlayerPrefs.Save();
     }
+    //change audio settings
     public void Audio(float volume)
     {
         mixer.SetFloat("music", volume);
@@ -80,6 +82,7 @@ public class settings : MonoBehaviour
         PlayerPrefs.Save();
     }
     private void Start()
+        //audio on buttons/background audio
     {
         if (PlayerPrefs.HasKey("music"))
         {
@@ -98,6 +101,7 @@ public class settings : MonoBehaviour
             mixer.SetFloat("video", PlayerPrefs.GetFloat("video"));
         }
     }
+    //exit
     public void Exit()
     {
         Application.Quit();
