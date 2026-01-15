@@ -106,5 +106,6 @@ public class settings : MonoBehaviour
     {
         Application.Quit();
     }
+
 }
 
