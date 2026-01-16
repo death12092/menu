@@ -8083,6 +8083,10 @@ PrefabInstance:
       propertyPath: controles
       value: 
       objectReference: {fileID: 5162285}
+    - target: {fileID: 1396299608896198669, guid: 5da2f2f4e8e11a74ba0cb91d2577a99b, type: 3}
+      propertyPath: noisecanvas
+      value: 
+      objectReference: {fileID: 353569310}
     - target: {fileID: 3059645415541017629, guid: 5da2f2f4e8e11a74ba0cb91d2577a99b, type: 3}
       propertyPath: m_Name
       value: script holder

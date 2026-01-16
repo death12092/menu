@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Rendering;
 using UnityEngine.Audio;
@@ -8,7 +8,7 @@ public class settings : MonoBehaviour
 {
     
     [SerializeField]
-    private Canvas main, Settings, audio, video, controles;
+    private Canvas main, Settings, noisecanvas, video, controles;
     [SerializeField]
     private AudioMixer mixer;
     [SerializeField]
@@ -28,11 +28,11 @@ public class settings : MonoBehaviour
     public void chang2()
     {
         Settings.gameObject.SetActive(false);
-        audio.gameObject.SetActive(true);
+        noisecanvas.gameObject.SetActive(true);
     }
     public void back2()
     {
-        audio.gameObject.SetActive(false);
+        noisecanvas.gameObject.SetActive(false);
         Settings.gameObject.SetActive(true);
     }
     public void chang3()
